@@ -43,6 +43,7 @@
   - id_etudiant
   - id_ue
   - id_resultat
+  - note
 
 
 - resultat:
