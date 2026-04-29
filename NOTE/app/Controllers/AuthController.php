@@ -9,11 +9,9 @@ class AuthController extends BaseController{
 
     public function login(){
         $model = new UserModel();
-        $user = $this->request->getPost('user');
-        $pwd = $this->request->getPost('pwd');
-        // $user = $model->where('user', $user)->first();
-        $user = $model->where('user', $user)->where('pwd', $pwd)->first();
-        // if (!$user || !pwd_verify($pwd, $user['pwd'])) {
+        $username = (string) $this->request->getPost('user');
+        $pwd = (string) $this->request->getPost('pwd');
+        $user = $model->checkLogin($username, $pwd);
         if (!$user) {
         return view('login', [
             'erreur' => 'user ou mot de passe incorrect'
@@ -23,7 +21,8 @@ class AuthController extends BaseController{
         session()->set('user', [
             'id'=> $user['id'],
             'user' => $user['user'],
-            'id_type_user' => $user['id_type_user'],  // 'admin' | 'bibliothecaire' | 'lecteur'
+            'id_type_user' => $user['id_type_user'],
+            'role' => $user['role'] ?? null,
         ]);
         // return view('/dashboard');
         return redirect()->to('/dashboard');

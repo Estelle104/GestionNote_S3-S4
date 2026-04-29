@@ -14,12 +14,18 @@ class RoleFilter implements FilterInterface {
             return redirect()->to('/login')->with('erreur', 'Veuillez vous connecter');
         }
         
+        $role = $user['role'] ?? null;
+        $typeId = $user['id_type_user'] ?? null;
+
         // L'admin a accès à tout
-        if ($user['role'] === 'admin') {
+        if ($role === 'admin' || (string) $typeId === '1') {
             return;
         }
 
-        if (!in_array($user['role'], $arguments ?? [])) {
+        $allowed = $arguments ?? [];
+        $hasAccess = in_array($role, $allowed, true) || in_array((string) $typeId, $allowed, true);
+
+        if (!$hasAccess) {
             return redirect()->to('/')->with('erreur', 'Accès refusé : droits insuffisants');
         }
     }
