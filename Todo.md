@@ -142,7 +142,7 @@
 #### table et model
 - etudiant
 
-#### fonciton dans model
+#### fonction dans model
 - etudiant.getAll
 - filterEtudiant()
 

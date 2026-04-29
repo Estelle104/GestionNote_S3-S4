@@ -13,6 +13,9 @@ $routes->get('/dashboard', 'Home::showDashboard', ['filter' => 'role:admin']);
 $routes->get('/form','Home::showForm', ['filter' => 'auth']);
 $routes->get('/list','Home::showList', ['filter' => 'auth']);
 
+$routes->get('/etudiants/list', 'EtudiantController::list');
+$routes->post('/etudiants/filter', 'EtudiantController::filter');
+
 // NOTE
 
 // formulaire ajout note
