@@ -79,39 +79,40 @@
   - L2: moyenne pour S3+S4
 
 
-### 1- Login (Andry)
-#### table et model
-- user
-- type_user
+[ok]### 1- Login (Andry)
+    #### table et model
+[ok]- user
+[ok]- type_user
+[ok]- UserModel 
 
-#### fonction dans model: 
-- checkLogin
-  - check le type user , utiliser filter
-- crud
+[ok]#### fonction dans model: 
+[ok]- checkLogin
+[ok]  - check le type user , utiliser filter
+    - crud
 
-#### route
+[ok]#### route
 - "/" ou "/login" : login
 
 
-#### controller
-- retuourne le formulaire
-- fait la redirection
+[ok]#### controller
+[ok]- retuourne le formulaire
+[ok]- fait la redirection
 
-#### design
-- formulaire de login
-  - login
-  - mdp
-  - bouton se connecter
+[ok]#### design
+[ok]- formulaire de login
+[ok]  - login
+[ok]  - mdp
+[ok]  - bouton se connecter
 
 
 
 ### 2- ajout de note (Estelle)
 #### table et model
-- etudiant
-- note
-- ue
-- semestre
-- resultat
+- (ok) etudiant
+- (ok) note
+- (ok) ue
+- (ok) semestre
+- (ok) resultat
 
 #### fonction dans model
 - note.add
