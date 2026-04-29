@@ -65,7 +65,7 @@
     </a>
 
     <div class="sidebar-bottom">
-      <a href="login.php" class="user-row">
+      <a href="/logout" class="user-row">
         <div class="avatar">AD</div>
         <div class="user-info">
           <div class="name">Admin Sys</div>

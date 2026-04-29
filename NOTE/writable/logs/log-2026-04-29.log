@@ -1,0 +1,282 @@
+ERROR - 2026-04-29 07:53:56 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/app/Controllers/AuthController.php(15): CodeIgniter\BaseModel->first()
+#7 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/CodeIgniter.php(951): App\Controllers\AuthController->login()
+#8 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/app/Controllers/AuthController.php(15): CodeIgniter\BaseModel->first()
+#6 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/CodeIgniter.php(951): App\Controllers\AuthController->login()
+#7 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#8 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#12 {main}
+CRITICAL - 2026-04-29 07:53:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: POST, Route: login]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/AuthController.php(15): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\AuthController->login()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-04-29 07:55:19 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/app/Controllers/AuthController.php(15): CodeIgniter\BaseModel->first()
+#7 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/CodeIgniter.php(951): App\Controllers\AuthController->login()
+#8 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/app/Controllers/AuthController.php(15): CodeIgniter\BaseModel->first()
+#6 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/CodeIgniter.php(951): App\Controllers\AuthController->login()
+#7 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#8 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#12 {main}
+CRITICAL - 2026-04-29 07:55:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: POST, Route: login]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/AuthController.php(15): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\AuthController->login()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-04-29 07:55:42 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/app/Controllers/AuthController.php(15): CodeIgniter\BaseModel->first()
+#7 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/CodeIgniter.php(951): App\Controllers\AuthController->login()
+#8 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/app/Controllers/AuthController.php(15): CodeIgniter\BaseModel->first()
+#6 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/CodeIgniter.php(951): App\Controllers\AuthController->login()
+#7 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#8 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#12 {main}
+CRITICAL - 2026-04-29 07:55:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: POST, Route: login]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/AuthController.php(15): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\AuthController->login()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-04-29 07:56:34 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/app/Controllers/AuthController.php(15): CodeIgniter\BaseModel->first()
+#7 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/CodeIgniter.php(951): App\Controllers\AuthController->login()
+#8 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/app/Controllers/AuthController.php(15): CodeIgniter\BaseModel->first()
+#6 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/CodeIgniter.php(951): App\Controllers\AuthController->login()
+#7 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#8 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#12 {main}
+CRITICAL - 2026-04-29 07:56:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: POST, Route: login]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/AuthController.php(15): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\AuthController->login()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-04-29 07:58:29 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/app/Controllers/AuthController.php(15): CodeIgniter\BaseModel->first()
+#7 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/CodeIgniter.php(951): App\Controllers\AuthController->login()
+#8 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/app/Controllers/AuthController.php(15): CodeIgniter\BaseModel->first()
+#6 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/CodeIgniter.php(951): App\Controllers\AuthController->login()
+#7 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#8 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#12 {main}
+CRITICAL - 2026-04-29 07:58:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: POST, Route: login]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/AuthController.php(15): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\AuthController->login()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-04-29 08:03:02 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/app/Controllers/AuthController.php(15): CodeIgniter\BaseModel->first()
+#7 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/CodeIgniter.php(951): App\Controllers\AuthController->login()
+#8 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/app/Controllers/AuthController.php(15): CodeIgniter\BaseModel->first()
+#6 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/CodeIgniter.php(951): App\Controllers\AuthController->login()
+#7 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#8 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#11 /home/andry/Documents/Fianarana/S4/Mr_Rojo/SystemeInfo/TP_TRINOME_GIT/GestionNote_S3-S4/NOTE/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#12 {main}
+CRITICAL - 2026-04-29 08:03:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: POST, Route: login]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/AuthController.php(15): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\AuthController->login()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
