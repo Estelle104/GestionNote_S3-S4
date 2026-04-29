@@ -30,3 +30,6 @@ $routes->get('/note/(:num)', 'NoteController::show/$1');
 $routes->post('/note/update/(:num)', 'NoteController::updateNote/$1');
 $routes->get('/note/delete/(:num)', 'NoteController::deleteNote/$1');
 $routes->get('/note/etudiant/(:num)', 'NoteController::getNotesByEtudiant/$1');
+$routes->get('/resultat/s3/(:num)', 'NoteController::showS3/$1', ['filter' => 'auth']);
+$routes->get('/resultat/s4/(:num)', 'NoteController::showS4/$1', ['filter' => 'auth']);
+$routes->get('/resultat/l2/(:num)', 'NoteController::showL2/$1', ['filter' => 'auth']);
