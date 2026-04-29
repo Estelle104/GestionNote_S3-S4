@@ -79,15 +79,16 @@
   - L2: moyenne pour S3+S4
 
 
-### 1- Login (Andry)
-#### table et model
-- user
-- type_user
+[ok]### 1- Login (Andry)
+    #### table et model
+[ok]- user
+[ok]- type_user
+[ok]- UserModel 
 
-#### fonction dans model: 
-- checkLogin
-  - check le type user , utiliser filter
-- crud
+[ok]#### fonction dans model: 
+[ok]- checkLogin
+[ok]  - check le type user , utiliser filter
+    - crud
 
 #### route
 - "/" ou "/login" : login
