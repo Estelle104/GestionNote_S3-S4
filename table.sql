@@ -85,5 +85,6 @@ CREATE TABLE note (
     id INT AUTO_INCREMENT PRIMARY KEY,
     id_etudiant INT,
     id_ue INT,
-    id_resultat INT
+    id_resultat INT,
+    note DECIMAL(5,2)
 );
