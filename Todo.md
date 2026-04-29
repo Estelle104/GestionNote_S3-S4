@@ -107,11 +107,11 @@
 
 ### 2- ajout de note (Estelle)
 #### table et model
-- etudiant
-- note
-- ue
-- semestre
-- resultat
+- (ok) etudiant
+- (ok) note
+- (ok) ue
+- (ok) semestre
+- (ok) resultat
 
 #### fonction dans model
 - note.add
