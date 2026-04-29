@@ -94,15 +94,15 @@
 - "/" ou "/login" : login
 
 
-#### controller
-- retuourne le formulaire
-- fait la redirection
+[ok]#### controller
+[ok]- retuourne le formulaire
+[ok]- fait la redirection
 
-#### design
-- formulaire de login
-  - login
-  - mdp
-  - bouton se connecter
+[ok]#### design
+[ok]- formulaire de login
+[ok]  - login
+[ok]  - mdp
+[ok]  - bouton se connecter
 
 
 
