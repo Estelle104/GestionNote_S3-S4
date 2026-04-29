@@ -36,6 +36,31 @@ class NoteController extends Controller
         return view('addNote', $data);
     }
 
+    /**
+     * Affiche la liste des notes avec gestion (modifier/supprimer)
+     */
+    public function listNotes()
+    {
+        $db = \Config\Database::connect();
+        
+        $notes = $db->table('note')
+            ->select('note.id, note.note, etudiant.prenom, etudiant.nom, ue.code, ue.description, ue.credit, resultat.mention, note.id_etudiant, note.id_ue')
+            ->join('etudiant', 'etudiant.id = note.id_etudiant')
+            ->join('ue', 'ue.id = note.id_ue')
+            ->join('resultat', 'resultat.id = note.id_resultat')
+            ->orderBy('etudiant.nom', 'ASC')
+            ->orderBy('etudiant.prenom', 'ASC')
+            ->get()
+            ->getResultArray();
+
+        $data = [
+            'notes' => $notes,
+            'etudiants' => $this->etudiantModel->findAll(),
+        ];
+
+        return view('listNotes', $data);
+    }
+
     public function addNote()
     {
         $note = $this->request->getPost('note');
@@ -156,6 +181,15 @@ class NoteController extends Controller
     public function updateNote($id)
     {
         $note = $this->request->getPost('note');
+        
+        // Récupérer la note existante
+        $existingNote = $this->noteModel->getNoteById($id);
+        if (!$existingNote) {
+            return $this->response->setJSON([
+                'status' => false,
+                'message' => 'Note introuvable'
+            ]);
+        }
 
         $resultat = $this->resultatModel
             ->where('min <=', $note)
@@ -163,22 +197,18 @@ class NoteController extends Controller
             ->first();
 
         if (!$resultat) {
-
             return $this->response->setJSON([
                 'status' => false,
-                'message' => 'Résultat introuvable'
+                'message' => 'Aucun résultat correspondant à cette note'
             ]);
         }
 
         $data = [
-            'id_etudiant' => $this->request->getPost('id_etudiant'),
-            'id_ue'       => $this->request->getPost('id_ue'),
             'id_resultat' => $resultat['id'],
             'note'        => $note
         ];
 
-        if (!$this->noteModel->updateNote($id, $data)) {
-
+        if (!$this->noteModel->update($id, $data)) {
             return $this->response->setJSON([
                 'status' => false,
                 'errors' => $this->noteModel->errors()

@@ -17,6 +17,8 @@ $routes->get('/list','Home::showList', ['filter' => 'auth']);
 
 // formulaire ajout note
 $routes->get('/note', 'NoteController::formAddNote');
+// liste des notes
+$routes->get('/note/list', 'NoteController::listNotes');
 // ajouter une note
 $routes->post('/note/add', 'NoteController::addNote');
 // ajouter plusieurs notes
