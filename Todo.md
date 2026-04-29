@@ -4,8 +4,7 @@
 - Afficher le bulletin d' un etudiant selon tous ses notes S3 et S4
 - Afficher les Options auxquels l etudiant peut acceder selon ses notes S4
 
-## Database
-
+## Database (script de IA)
 ### Tables
 - etudiant:
   - id
@@ -66,9 +65,9 @@
 
 
 
-## Fonctionalités
-- Login (avec valeur par défaut)
-- Formulaire d' ajout d' une note
+## Fonctionalités 
+- Login (avec valeur par défaut) 
+- Formulaire d' ajout d' une note 
 - Liste etudiant
 - Clique sur un etudiant, affighe:
   - S3
@@ -79,7 +78,7 @@
   - L2: moyenne pour S3+S4
 
 
-### 1- Login
+### 1- Login (Andry)
 #### table et model
 - user
 - type_user
@@ -105,7 +104,7 @@
 
 
 
-### 2- ajout de note
+### 2- ajout de note (Estelle)
 #### table et model
 - etudiant
 - note
@@ -137,7 +136,7 @@
   - bouton ajouter
 - div pour message succes ou non
 
-### 3- Liste des etudiants
+### 3- Liste des etudiants (Miantsa)
 #### table et model
 - etudiant
 
@@ -153,7 +152,7 @@
 - champ de filtre
 - bouton filtrer
 
-### 4- Affichage des notes 
+### 4- Affichage des notes (Tous) 
 #### Table et model
 - etudiant
 - note
@@ -173,16 +172,16 @@
 
 #### Design
 - Page voir resultat
-  - lien : voir S3
+  - lien : voir S3 (Andry)
       - affichage bulletin de note S3
-  - lien : voir S4
+  - lien : voir S4 (Estelle)
     - affichage bulletin de note S4
       - afficher par option 
-  - lien : voir L2
+  - lien : voir L2 (Miantsa)
     - affichage dee 2 semestres et une moyenne (S3+S4)
 
 
-## Design a faire
+## Design a faire 
 - Personnaliser le template avec le fichier SCSS fourni
 
 ## Regle de gestion
