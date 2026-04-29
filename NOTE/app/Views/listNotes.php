@@ -1,10 +1,10 @@
-<!DOCTYPE php>
-<php lang="fr">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SysInfo — Gestion des notes</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
 
@@ -485,4 +485,4 @@ document.getElementById('editModal').addEventListener('click', function(e) {
 </script>
 
 </body>
-</php>
+</html>

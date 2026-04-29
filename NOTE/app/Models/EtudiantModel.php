@@ -27,12 +27,11 @@ class EtudiantModel extends Model
 
     public function getNoteByEtudiant(int $idEtudiant, ?int $idSemestre = null): array
     {
-        $builder = $this->db->table('note')
-            ->select('note.*, ue.description AS ue, ue.code, ue.credit, ue.is_optionnel, semestre.id AS id_semestre, semestre.description AS semestre, resultat.mention')
-            ->join('ue', 'ue.id = note.id_ue', 'left')
+        $builder = $this->db->table('ue')
+            ->select('ue.id AS id_ue, ue.description AS ue, ue.code, ue.credit, ue.is_optionnel, semestre.id AS id_semestre, semestre.description AS semestre, note.id AS id_note, note.id_etudiant, note.note, note.id_resultat, resultat.mention')
+            ->join('note', 'note.id_ue = ue.id AND note.id_etudiant = ' . (int) $idEtudiant, 'left')
             ->join('semestre', 'semestre.id = ue.id_semestre', 'left')
-            ->join('resultat', 'resultat.id = note.id_resultat', 'left')
-            ->where('note.id_etudiant', $idEtudiant);
+            ->join('resultat', 'resultat.id = note.id_resultat', 'left');
 
         if ($idSemestre !== null) {
             $builder->where('ue.id_semestre', $idSemestre);
@@ -43,12 +42,11 @@ class EtudiantModel extends Model
 
     public function getNoteParOption(int $idEtudiant, ?int $idSemestre = null): array
     {
-        $builder = $this->db->table('note')
-            ->select('note.*, ue.description AS ue, ue.code, ue.credit, ue.is_optionnel, semestre.id AS id_semestre, semestre.description AS semestre, resultat.mention')
-            ->join('ue', 'ue.id = note.id_ue', 'left')
+        $builder = $this->db->table('ue')
+            ->select('ue.id AS id_ue, ue.description AS ue, ue.code, ue.credit, ue.is_optionnel, semestre.id AS id_semestre, semestre.description AS semestre, note.id AS id_note, note.id_etudiant, note.note, note.id_resultat, resultat.mention')
+            ->join('note', 'note.id_ue = ue.id AND note.id_etudiant = ' . (int) $idEtudiant, 'left')
             ->join('semestre', 'semestre.id = ue.id_semestre', 'left')
             ->join('resultat', 'resultat.id = note.id_resultat', 'left')
-            ->where('note.id_etudiant', $idEtudiant)
             ->where('ue.is_optionnel', 1);
 
         if ($idSemestre !== null) {
@@ -60,12 +58,11 @@ class EtudiantModel extends Model
 
     public function getNoteOptionParOrdre(int $idEtudiant, ?int $idSemestre = null): array
     {
-        $builder = $this->db->table('note')
-            ->select('note.*, ue.description AS ue, ue.code, ue.credit, ue.is_optionnel, semestre.id AS id_semestre, semestre.description AS semestre, resultat.mention')
-            ->join('ue', 'ue.id = note.id_ue', 'left')
+        $builder = $this->db->table('ue')
+            ->select('ue.id AS id_ue, ue.description AS ue, ue.code, ue.credit, ue.is_optionnel, semestre.id AS id_semestre, semestre.description AS semestre, note.id AS id_note, note.id_etudiant, note.note, note.id_resultat, resultat.mention')
+            ->join('note', 'note.id_ue = ue.id AND note.id_etudiant = ' . (int) $idEtudiant, 'left')
             ->join('semestre', 'semestre.id = ue.id_semestre', 'left')
             ->join('resultat', 'resultat.id = note.id_resultat', 'left')
-            ->where('note.id_etudiant', $idEtudiant)
             ->where('ue.is_optionnel', 1);
 
         if ($idSemestre !== null) {

@@ -6,6 +6,7 @@ use App\Models\NoteModel;
 use App\Models\ResultatModel;
 use App\Models\EtudiantModel;
 use App\Models\UeModel;
+use App\Models\SemestreModel;
 use CodeIgniter\Controller;
 
 class NoteController extends Controller
@@ -14,6 +15,7 @@ class NoteController extends Controller
     protected $resultatModel;
     protected $etudiantModel;
     protected $ueModel;
+    protected $semestreModel;
 
     public function __construct()
     {
@@ -21,6 +23,7 @@ class NoteController extends Controller
         $this->resultatModel = new ResultatModel();
         $this->etudiantModel = new EtudiantModel();
         $this->ueModel = new UeModel();
+        $this->semestreModel = new SemestreModel();
     }
 
     /**
@@ -246,5 +249,93 @@ class NoteController extends Controller
         $notes = $this->noteModel->getNotesByEtudiant($idEtudiant);
 
         return $this->response->setJSON($notes);
+    }
+
+    public function showS3($idEtudiant)
+    {
+        return $this->renderResultat((int) $idEtudiant, 3, 'resultat_s3');
+    }
+
+    public function showS4($idEtudiant)
+    {
+        return $this->renderResultat((int) $idEtudiant, 4, 'resultat_s4');
+    }
+
+    public function showL2($idEtudiant)
+    {
+        $etudiant = $this->etudiantModel->find((int) $idEtudiant);
+
+        if (!$etudiant) {
+            return $this->response->setStatusCode(404)->setBody('Etudiant introuvable');
+        }
+
+        $s3Id = $this->getSemestreId(3);
+        $s4Id = $this->getSemestreId(4);
+
+        $notesS3 = $this->etudiantModel->getNoteByEtudiant((int) $idEtudiant, $s3Id);
+        $notesS4 = $this->etudiantModel->getNoteByEtudiant((int) $idEtudiant, $s4Id);
+
+        $resumeS3 = $this->etudiantModel->calculMoyenne((int) $idEtudiant, $s3Id);
+        $resumeS4 = $this->etudiantModel->calculMoyenne((int) $idEtudiant, $s4Id);
+
+        $totalCredits = $resumeS3['credits'] + $resumeS4['credits'];
+        $totalPoints = ($resumeS3['moyenne'] * $resumeS3['credits']) + ($resumeS4['moyenne'] * $resumeS4['credits']);
+        $moyenne = $totalCredits > 0 ? round($totalPoints / $totalCredits, 2) : 0.0;
+
+        $mention = $this->resultatModel
+            ->where('min <=', $moyenne)
+            ->where('max >=', $moyenne)
+            ->first();
+
+        $data = [
+            'etudiant' => $etudiant,
+            'notesS3' => $notesS3,
+            'notesS4' => $notesS4,
+            'credits' => $totalCredits,
+            'moyenne' => $moyenne,
+            'mention' => $mention['mention'] ?? 'N/A',
+            'admis' => $moyenne >= 10,
+        ];
+
+        return view('resultat_l2', $data);
+    }
+
+    private function renderResultat(int $idEtudiant, int $semestreNumero, string $view)
+    {
+        $etudiant = $this->etudiantModel->find($idEtudiant);
+
+        if (!$etudiant) {
+            return $this->response->setStatusCode(404)->setBody('Etudiant introuvable');
+        }
+
+        $idSemestre = $this->getSemestreId($semestreNumero);
+        $notes = $this->etudiantModel->getNoteByEtudiant($idEtudiant, $idSemestre);
+        $resume = $this->etudiantModel->calculMoyenne($idEtudiant, $idSemestre);
+
+        $mention = $this->resultatModel
+            ->where('min <=', $resume['moyenne'])
+            ->where('max >=', $resume['moyenne'])
+            ->first();
+
+        $data = [
+            'etudiant' => $etudiant,
+            'notes' => $notes,
+            'credits' => $resume['credits'],
+            'moyenne' => $resume['moyenne'],
+            'mention' => $mention['mention'] ?? 'N/A',
+            'admis' => $resume['moyenne'] >= 10,
+            'semestre' => $semestreNumero,
+        ];
+
+        return view($view, $data);
+    }
+
+    private function getSemestreId(int $numero): int
+    {
+        $semestre = $this->semestreModel
+            ->like('description', (string) $numero)
+            ->first();
+
+        return (int) ($semestre['id'] ?? $numero);
     }
 }
