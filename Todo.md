@@ -115,14 +115,14 @@
 - (ok) resultat
 
 #### fonction dans model
-- note.add
-- etudiant.getById
-- etudiant.getAll
-- ue.getById
-- ue.getAll
-- semestre.getById
-- semestre.getAll
-- getResultatByNote (bien/tres bien/...)
+- (ok) note.add
+- (ok) etudiant.getById
+- (ok) etudiant.getAll
+- (ok) ue.getById
+- (ok) ue.getAll
+- (ok) semestre.getById
+- (ok) semestre.getAll
+- (ok) getResultatByNote (bien/tres bien/...)
   - check la note si entre min et max d'un resultat 
   - retourne la mention
 
@@ -130,12 +130,12 @@
 - 
 
 #### design
-- formulaire d'ajout de note 
-  - liste deroulante d'etudiant
-  - liste deroulante de ue
-  - semestre
-  - note
-  - bouton ajouter
+- (ok) formulaire d'ajout de note 
+  - (ok) liste deroulante d'etudiant
+  - (ok) liste deroulante de ue
+  - (ok) semestre
+  - (ok) note
+  - (ok) bouton ajouter
 - div pour message succes ou non
 
 ### 3- Liste des etudiants (Miantsa)
@@ -172,15 +172,15 @@
 #### COntroller
 
 
-#### Design
-- Page voir resultat
-  - lien : voir S3 (Andry)
-      - affichage bulletin de note S3
-  - lien : voir S4 (Estelle)
-    - affichage bulletin de note S4
-      - afficher par option 
-  - lien : voir L2 (Miantsa)
-    - affichage dee 2 semestres et une moyenne (S3+S4)
+[ok]#### Design
+[ok]- Page voir resultat
+[ok]  - lien : voir S3 (Andry)
+[ok]      - affichage bulletin de note S3
+[ok]  - lien : voir S4 (Estelle)
+[ok]    - affichage bulletin de note S4
+[ok]      - afficher par option 
+[ok]  - lien : voir L2 (Miantsa)
+[ok]    - affichage dee 2 semestres et une moyenne (S3+S4)
 
 
 ## Design a faire 
