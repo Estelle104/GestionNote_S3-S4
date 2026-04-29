@@ -5,10 +5,13 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
-$routes->get('/dashboard', 'Home::showDashboard');
-$routes->get('/form','Home::showForm');
-$routes->get('/list','Home::showList');
+$routes->get('/', 'AuthController::form');
+$routes->get('/login', 'AuthController::form');
+$routes->post('/login', 'AuthController::login');
+$routes->get('/logout', 'AuthController::logout');
+$routes->get('/dashboard', 'Home::showDashboard', ['filter' => 'role:admin']);
+$routes->get('/form','Home::showForm', ['filter' => 'auth']);
+$routes->get('/list','Home::showList', ['filter' => 'auth']);
 
 // NOTE
 
